@@ -49,9 +49,10 @@ tabLinksParent.addEventListener("click", tabs)
 
 function showPrevSLider() {
    slideCount--
-   if (slideCount > 0) {
+   if (slideCount < 0) {
       slideCount = slidesParent.children.length - 1
    }
+   
    slidesParent.style.transform = `translateX(-${slideCount}00%)`
 }
 function showNextSLider() {
