@@ -1,0 +1,543 @@
+@import 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap';
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header,
+footer,
+.promo,
+.menu-slider,
+.to-booking,
+.reservations {
+  color: white;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+address {
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "League Spartan", sans-serif;
+  color: #242B37;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+button,
+input {
+  font-family: "League Spartan", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn {
+  padding: 25px 55px 23px 54px;
+  border: 1px solid #FFF;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFF;
+}
+.btn:hover {
+  background-color: #FFFFFF;
+  color: #111;
+}
+
+.btn-dark {
+  border-color: #111111;
+  background-color: #111111;
+}
+.btn-dark:hover {
+  border: 1px solid #111;
+}
+
+.heading {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.image-line-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.image-line-top .img-line {
+  position: absolute;
+  -webkit-transform: translate(-50px, -38px);
+          transform: translate(-50px, -38px);
+}
+
+.image-line-bottom {
+  position: relative;
+}
+.image-line-bottom::before {
+  display: block;
+  width: 160px;
+  height: 76px;
+  background-image: url(../img/img-line.svg);
+  content: "";
+  position: absolute;
+  bottom: -36px;
+  left: -90px;
+  z-index: -1;
+}
+
+.image-line-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.image-line-right .img-line {
+  -webkit-transform: translate(625px, -35px);
+          transform: translate(625px, -35px);
+}
+
+.img-line {
+  display: block;
+  width: 160px;
+  height: 76px;
+  background-image: url(../img/img-line.svg);
+}
+
+.text-line::before {
+  display: block;
+  content: "";
+  margin-bottom: 55px;
+  width: 71px;
+  height: 7px;
+  background-image: url(../img/text-line.svg);
+}
+
+.text-line-right-big::before {
+  top: 6.5px;
+  right: 125px;
+  width: 96px;
+}
+
+.text-line-right-small::before {
+  top: 10px;
+  right: 61px;
+  width: 32px;
+}
+
+.text-line-right::before {
+  display: block;
+  position: relative;
+  content: "";
+  height: 1px;
+  background: #9E7F66;
+}
+
+@media screen and (min-width: 850px) {
+  .text-line-right-small::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 1282px) {
+  .image-line-right .img-line {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .image-line-top .img-line {
+    display: none;
+  }
+}
+@media screen and (max-width: 1149px) {
+  .container {
+    padding: 0 39px;
+  }
+  .text-line-right-big::before {
+    width: 31px;
+    right: 48px;
+  }
+}
+@media screen and (max-width: 951px) {
+  .text-line-right-big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .text-line-right-big::before {
+    width: 41px;
+    position: static;
+  }
+}
+@media screen and (max-width: 850px) {
+  .text-line::before {
+    margin: 0 auto 39px auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 24px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .heading {
+    font-size: 32px;
+  }
+}
+.footer {
+  background-color: #111111;
+  padding: 80px 0 76px 0;
+}
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+.footer__content .logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.footer__content > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.footer__content > div:last-child ul,
+.footer__content > div:last-child div {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 667px) {
+  .footer footer > div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer footer > div > div:last-child {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    display: block;
+  }
+  .footer footer > div > div:last-child ul {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 434px) {
+  .footer footer > div {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .footer footer > div .logo {
+    margin-bottom: 42px;
+  }
+}
+.reservations {
+  background-image: url(../img/desktop/booking-bg-img.jpg), url(../img/form-bg-img.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, auto;
+  background-position: left top, left bottom;
+  padding-bottom: 116px;
+}
+.reservations header {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  margin-bottom: 88px;
+}
+.reservations__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.reservations__content .info {
+  max-width: 445px;
+}
+.reservations__content .info h2 {
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+.reservations__content form {
+  width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 48px;
+  -webkit-box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+          box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+  background-color: white;
+}
+.reservations__content form > div {
+  margin-bottom: 34px;
+}
+.reservations__content form .date,
+.reservations__content form .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #111111;
+}
+.reservations__content form .date > div:last-child,
+.reservations__content form .time > div:last-child {
+  max-width: 309px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.reservations__content form .date > div:last-child select,
+.reservations__content form .time > div:last-child select {
+  text-transform: uppercase;
+}
+.reservations__content form .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+}
+.reservations__content form .counter span {
+  color: #111111;
+}
+.reservations__content form .counter button {
+  padding: 0;
+  font-weight: 700;
+  color: #9E7F66;
+}
+
+input, .counter {
+  width: 100%;
+}
+
+input,
+select,
+.counter {
+  border: 0;
+  padding: 2px 16px 15px 16px;
+  border-bottom: 1px solid #8E8E8E;
+  font-size: 20px;
+  outline: 0;
+}
+input:focus,
+select:focus,
+.counter:focus {
+  border-bottom: 1px solid #9E7F66;
+}
+
+.error span {
+  color: #B54949;
+}
+.error input, .error select {
+  color: #B54949;
+  border-color: #B54949;
+}
+.error input::-webkit-input-placeholder, .error select::-webkit-input-placeholder {
+  color: #B54949;
+}
+.error input::-moz-placeholder, .error select::-moz-placeholder {
+  color: #B54949;
+}
+.error input:-ms-input-placeholder, .error select:-ms-input-placeholder {
+  color: #B54949;
+}
+.error input::-ms-input-placeholder, .error select::-ms-input-placeholder {
+  color: #B54949;
+}
+.error input::placeholder, .error select::placeholder {
+  color: #B54949;
+}
+.error .error-el {
+  color: #B54949;
+  margin-top: 1px;
+  text-align: left;
+  font-size: 10px;
+}
+.error .error-el-select {
+  padding: 0;
+}
+
+input {
+  color: #111111;
+}
+input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+input::-moz-placeholder {
+  opacity: 0.5;
+}
+input:-ms-input-placeholder {
+  opacity: 0.5;
+}
+input::-ms-input-placeholder {
+  opacity: 0.5;
+}
+input::placeholder {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 980px) {
+  .reservations {
+    background-image: url(../img/tablet/booking-bg-img.jpg), none;
+    background-size: 100% auto;
+  }
+  .reservations header {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin-bottom: 70px;
+  }
+  .reservations__content {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reservations__content .info {
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+  .reservations__content form .date, .reservations__content form .time {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .reservations__content form::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 678px) {
+  .reservations__content form {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 601px) {
+  .reservations {
+    background-image: url(../img/mobile/booking-bg-img.jpg), none;
+  }
+  .reservations__content .info h2 {
+    font-size: 32px;
+  }
+  .reservations__content form {
+    padding: 32px;
+  }
+  .reservations__content form .date, .reservations__content form .time {
+    row-gap: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .reservations__content form .date > div:first-child, .reservations__content form .time > div:first-child {
+    text-align: start;
+  }
+  .reservations__content form .date > div:last-child, .reservations__content form .time > div:last-child {
+    max-width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0;
+  }
+  .reservations .btn {
+    padding: 19px 0 17px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}/*# sourceMappingURL=booking.css.map */

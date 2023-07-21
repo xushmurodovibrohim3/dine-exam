@@ -1,0 +1,242 @@
+@import 'https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap';
+
+$dark: #111111;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+header,
+footer,
+.promo,
+.menu-slider,
+.to-booking,
+.reservations {
+   color: white;
+}
+
+.container {
+   max-width: 1110px;
+   margin: 0 auto;
+}
+
+main {
+   flex-grow: 1;
+}
+
+address {
+   font-style: normal;
+}
+
+body {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   font-family: 'League Spartan', sans-serif;
+   color: #242B37;
+}
+
+::-webkit-scrollbar {
+   width: 0px;
+}
+
+p {
+   font-size: 20px;
+   line-height: 30px
+}
+
+li {
+   list-style-type: none;
+}
+
+button,
+input {
+   font-family: 'League Spartan', sans-serif;
+}
+
+button {
+   background-color: transparent;
+   padding: 0;
+   cursor: pointer;
+   border: 0;
+}
+
+.btn {
+   padding: 25px 55px 23px 54px;
+   border: 1px solid #FFF;
+   letter-spacing: 2.5px;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: #FFF;
+
+   &:hover {
+      background-color: #FFFFFF;
+      color: #111;
+   }
+}
+.btn-dark{
+   border-color: $dark;
+   background-color: $dark;
+
+   &:hover {
+      border: 1px solid #111;
+   }
+}
+
+.heading {
+   font-size: 48px;
+   line-height: 48px;
+}
+
+
+.image-line-top {
+   display: flex;
+   position: relative;
+
+   .img-line {
+      position: absolute;
+      transform: translate(-50px, -38px);
+   }
+}
+
+.image-line-bottom {
+   position: relative;
+   
+   &::before{
+      display: block;
+      width: 160px;
+      height: 76px;
+      background-image: url(../img/img-line.svg);
+      content: "";
+      position: absolute;
+      bottom: -36px;
+      left: -90px;
+      z-index: -1;
+   }
+}
+
+.image-line-right {
+   display: flex;
+   align-items: center;
+
+   .img-line {
+      transform: translate(625px, -35px);
+   }
+}
+
+.img-line {
+   display: block;
+   width: 160px;
+   height: 76px;
+   background-image: url(../img/img-line.svg);
+}
+
+.text-line {
+   &::before {
+      display: block;
+      content: "";
+      margin-bottom: 55px;
+      width: 71px;
+      height: 7px;
+      background-image: url(../img/text-line.svg);
+   }
+}
+
+.text-line-right-big {
+   &::before {
+      top: 6.5px;
+      right: 125px;
+      width: 96px;
+   }
+}
+
+.text-line-right-small {
+   &::before {
+      top: 10px;
+      right: 61px;
+      width: 32px;
+   }
+}
+
+
+.text-line-right {
+   &::before {
+      display: block;
+      position: relative;
+      content: "";
+      height: 1px;
+      background: #9E7F66;
+   }
+}
+
+@media screen and (min-width: 850px) {
+   .text-line-right-small {
+      &::before {
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: 1282px) {
+   .image-line-right {
+      .img-line {
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .image-line-top {
+      .img-line {
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: 1149px) {
+   .container {
+      padding: 0 39px;
+   }
+
+   .text-line-right-big {
+      &::before {
+         width: 31px;
+         right: 48px;
+      }
+   }
+}
+
+@media screen and (max-width: 951px) {
+   .text-line-right-big {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &::before {
+         width: 41px;
+         position: static;
+      }
+   }
+}
+
+@media screen and (max-width: 850px) {
+   .text-line::before {
+      margin: 0 auto 39px auto;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .container {
+      padding: 0 24px;
+   }
+
+   p {
+      font-size: 16px;
+   }
+
+   .heading {
+      font-size: 32px;
+   }
+}
