@@ -368,6 +368,7 @@ button {
 
 .for-us__card {
   max-width: 1560px;
+  margin: 0 auto;
   background-image: url(../img/for-us-card-bg-img.svg);
   background-repeat: no-repeat;
 }
