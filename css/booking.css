@@ -20,6 +20,11 @@ footer,
   margin: 0 auto;
 }
 
+.container-lg {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

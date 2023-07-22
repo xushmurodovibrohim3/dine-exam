@@ -3,13 +3,14 @@
 
 .promo {
    background-color: #111111;
-   background-image: url(../img/desktop/header-bg-img.png);
-   background-repeat: no-repeat;
-   background-position: right top;
-   padding-bottom: 198px;
-
-   &>img {
-      display: none;
+   .container-lg{
+      background-image: url(../img/desktop/header-bg-img.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      padding-bottom: 198px;
+      &>img {
+         display: none;
+      }
    }
 
    header {
@@ -313,8 +314,6 @@
 
 @media screen and (max-width: 1150px) {
    .promo {
-      background-image: none;
-
       &__content {
          &>div:first-child {
             max-width: 100%;
@@ -329,9 +328,12 @@
          }
       }
 
-      &>img {
-         display: block;
-         width: 100%;
+      .container-lg{
+         background-image: none;
+         &>img {
+            display: block;
+            width: 100%;
+         }
       }
 
       background-size: 100% auto;
@@ -344,8 +346,6 @@
       }
 
    }
-
-
 }
 
 @media screen and (max-width: 850px) {

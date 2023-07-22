@@ -20,6 +20,11 @@ footer,
   margin: 0 auto;
 }
 
+.container-lg {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -296,12 +301,14 @@ button {
 }
 .promo {
   background-color: #111111;
+}
+.promo .container-lg {
   background-image: url(../img/desktop/header-bg-img.png);
   background-repeat: no-repeat;
   background-position: right top;
   padding-bottom: 198px;
 }
-.promo > img {
+.promo .container-lg > img {
   display: none;
 }
 .promo header {
@@ -591,7 +598,6 @@ button {
 
 @media screen and (max-width: 1150px) {
   .promo {
-    background-image: none;
     background-size: 100% auto;
     text-align: center;
   }
@@ -604,7 +610,10 @@ button {
   .promo__content .timer {
     display: none;
   }
-  .promo > img {
+  .promo .container-lg {
+    background-image: none;
+  }
+  .promo .container-lg > img {
     display: block;
     width: 100%;
   }
