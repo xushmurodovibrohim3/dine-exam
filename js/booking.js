@@ -148,16 +148,16 @@ function changeDaySelect() {
 
 function validateDate() {
    let hour = selectAmOrPm.value === 'pm' ? +selectHour.value + 12 : selectHour.value
-   tableTimeData = new Date(addZero(selectYear.value) + "-" + addZero(selectMonth.value) + '-' + addZero(selectDay.value) + "T" + addZero(hour) + ":" + addZero(selectMinut.value) + ':' + "00" + "Z")
-   // console.log(addZero(selectYear.value) + "-" + addZero(selectMonth.value) + '-' + addZero(selectDay.value) + "T" + addZero(hour) + ":" + addZero(selectMinut.value.innerText) + ':' + "00" + "Z");
+   tableTimeData = new Date(addZero(selectYear.value) + "-" + addZero(selectMonth.value) + '-' + addZero(selectDay.value) + "T" + addZero(hour) + ":" + addZero(+selectMinut.value) + ':' + "00" + "Z")
    let now = new Date()
    let limitDate = new Date()
    limitDate.setMonth(limitDate.getMonth() + 3)
    limitDate.setHours(now.getHours() + 5)
-   // console.log(tableTimeData, new Date(new Date().getMonth() + 5).getTime());
+   console.log(tableTimeData, new Date(new Date().getMonth() + 5).getTime());
    if (tableTimeData.getTime() < now.getTime()) {
       showError(document.querySelector('.time'), document.querySelector('.time').querySelector('.error-el'), "The date has passed")
       showError(document.querySelector('.date'), document.querySelector('.date').querySelector('.error-el'), "The date has passed")
+      console.log(document.querySelector('.date'), document.querySelector('.date').querySelector('.error-el'));
       dateStatus = false
    } else if (tableTimeData.getTime() > limitDate.getTime()){
       showError(document.querySelector('.time'), document.querySelector('.time').querySelector('.error-el'), "The date is wrong")
@@ -191,3 +191,6 @@ function fillingSelects(selectEl, arr , valueType) {
 function addZero(n) {
    return n < 10 ? "0" + n : n
 }
+
+let now = new Date("2023-01-01T01:00:00Z")
+console.log(now);
